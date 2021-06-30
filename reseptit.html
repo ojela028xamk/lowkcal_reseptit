@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link href='https://fonts.googleapis.com/css?family=Alegreya Sans' rel='stylesheet'>
+    <title>Vähäkaloriset reseptit</title>
+</head>
+<body onload="naytaPaaruoat()">
+<div id="wrapper">
+
+    <div id="ylaosa">
+        <img src="lowkcal_logo-01.png" alt="logo">
+    </div>
+
+    <nav id="navigointi">
+        <a href="index.html">Etusivu</a>
+        <a href="reseptit.html">Reseptit</a>
+        <a href="vinkit.html">Laihdutusvinkkejä</a>
+    </nav>
+
+    <div id="content">
+        <div id="content_reseptit">
+            <div id="content_reseptivalikko">
+                <div class="resepti" onclick="naytaPaaruoat()">
+                    <img src="kuvat/kuva1.png" alt="pääruoat">
+                </div>
+                <div class="resepti" onclick="naytaLisukkeet()">
+                    <img src="kuvat/kuva2.jpg" alt="lisukkeet">
+                </div>
+                <div class="resepti" onclick="naytaJalkiruoat()">
+                    <img src="kuvat/kuva3.jpg" alt="jälkiruoat">
+                </div>
+            </div>
+
+            <div id="content_reseptilista">
+                <div id="paaruoat">
+
+                </div>
+                <div id="jalkiruoat">
+                    
+                </div>
+                <div id="lisukkeet">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer id="footer">
+
+    </footer>
+
+
+</div>
+</body>
+<script src="index.js"></script>
+</html>
