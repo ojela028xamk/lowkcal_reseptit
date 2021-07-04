@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link href='https://fonts.googleapis.com/css?family=Alegreya Sans' rel='stylesheet'>
+    <title>Vähäkaloriset reseptit</title>
+</head>
+<body onload="listaaReseptit()">
+<div id="wrapper">
+    <div id="ylaosa">
+        <img src="lowkcal_logo-01.png" alt="logo">
+    </div>
+
+    <nav id="navigointi">
+        <a href="index.html">Etusivu</a>
+        <a href="reseptit.html">Reseptit</a>
+        <a href="vinkit.html">Laihdutusvinkkejä</a>
+    </nav>
+
+    <div id="content">
+        <div id="content_laskuri">
+        <form class="search-form">
+            <input type="text" class="search" placeholder="Reseptin nimi">
+            <ul class="suggestions">
+    
+
+            </ul>
+        </form>
+        <ul class="kalori_valinnat">
+
+        </ul>
+        </div>
+    </div>
+
+    <footer id="footer">
+
+    </footer>
+</div>
+
+
+</body>
+<script src="laskuri.js"></script>
+</html>

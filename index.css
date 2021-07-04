@@ -1,16 +1,22 @@
 /*
-#6D6875
-#B5838D
-#E5989B
-#FFB4A2
-#FFCDB2
-
-käytä tulevaisuudessa :root ja var
+#6D6875 musta
+#B5838D vaalea ruskea
+#E5989B pastel pink
+#FFB4A2 oranssi beige
+#FFCDB2 beige
 */
+
+:root {
+    --musta: #6D6875;
+    --vaalearuskea: #B5838D;
+    --pastelpink: #E5989B;
+    --oranssibeige: #FFB4A2;
+    --beige: #FFCDB2;
+}
 
 body {
     font-family: 'Alegreya Sans';
-    background: #FFB4A2;
+    background: var(--oranssibeige);
 }
 
 #wrapper {
@@ -110,7 +116,7 @@ a {
 }
 
 .paaruoka {
-    background-color: #B5838D;
+    background-color: var(--vaalearuskea);
     color: white;
     padding: 10px;
     font-size: 28px;
@@ -164,7 +170,7 @@ a {
     position: relative;
     padding: 15px;
     margin-bottom: 15px;
-    background: #E5989B;
+    background: var(--pastelpink);
     color: black;
 }
 
@@ -181,8 +187,24 @@ a {
     padding: 12px;
     width: 50px;
     font-size: 50px;
-    background: #E5989B;
+    background: var(--pastelpink);
     color: black;
+}
+
+/* Kalorilaskuri */
+
+#content_laskuri {
+    display: flex;
+}
+
+.search-form {
+    flex: 1;
+    border: 2px solid black;
+}
+
+.kalori_valinnat {
+    flex: 1;
+    border: 2px solid black;
 }
 
 /* Footer */
