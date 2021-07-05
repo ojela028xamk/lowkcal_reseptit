@@ -27,6 +27,7 @@ body {
     margin-top: 20px;
     border-radius: 10px;
     box-shadow: 0px 0px 10px black;
+    padding: 0.5%;
 }
 
 /* Yläosa ja navigointi */
@@ -67,15 +68,28 @@ a {
 
 #content_etusivu {
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 3fr 2fr;
+    padding: 2%;
 }
 
 #content_esitys {
     padding: 2%;
+    border-radius: 10px;
 }
 
 #content_ekirja {
     padding: 2%;
+}
+#ekirja {
+    padding: 0px;
+}
+#ekirja > img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+#ekirja > img:hover {
+    opacity: 0.8;
 }
 
 /* Content Reseptit */
@@ -129,7 +143,7 @@ a {
 
 .ainekset {
     display: none;
-    background-color: #FFCDB2;
+    background-color: var(--beige);
     flex: 34%;
     margin: 3%;
     padding: 1%;
@@ -209,10 +223,11 @@ a {
 
 /* Footer */
 
-#footer {
+footer {
     width: 96%;
-    height: 100px;
     margin: 2%;
+    border-radius: 10px;
+    text-align: center;
 }
 
 /* Fontit */
@@ -228,6 +243,11 @@ a {
     color: black;
     font-size: 42px;
     padding-left: 20px;
+}
+
+#content_esitys > h1 {
+    text-shadow: 3px 3px var(--beige);
+    font-size: 50px;
 }
 
 h4 {
@@ -251,4 +271,9 @@ p {
   font-size: 24px; 
   line-height: 1.3;
   margin-top: 15px;
+}
+
+footer > h1 {
+    color: var(--beige);
+    font-size: 28px;
 }

@@ -100,25 +100,25 @@ const paaruoat_arr = [
 
 const lisukkeet_arr = [
   {
-    otsikko: "Kalapuikot kermakastikkeessa",
+    otsikko: "Kerrosleipä",
     otsikko_kalorit: "300 kcal",
-    otsikko_annokset: "2 annosta",
+    otsikko_annokset: "- annosta",
     ainekset: [
-      "200 g Alaskanseiti",
-      "200 g Arki ruokakerma 10%",
-      "250 g Pirkka perunasuikaleet",
-      "100 g Pirkka vihannessekoitus",
-      "20 g Parmesaanijuusto",
-      "50 g Ykkösmaito",
-      "5 g Voi",
-      "20 g Valkoinen sipuli",
-      "Sitruunapippuria ja valkosipulijauhetta"
+      "2 siivua leipää ~90 kcal / siivu",
+      "20 g Felix voileipäkurkku",
+      "1 kpl Sulatejuustoviipale 5% ~28 kcal / viipale",
+      "30 g Atria vuolu kanafilee fajitas",
+      "10 g Pirkka BBQ-kastike",
+      "Makea friseesalaatti tai muu salaatti",
+      "20 g Lempi sipoolainen rahkajogurtti 0,7 %",
+      "10 g Hellmann's light mayonnaise",
+      "Jauhettu paprika"
     ],
     ohjeet: [
-      "Ensimmäinen ohje",
-      "Toinen ohje",
-      "Kolmas ohje",
-      "Neljäs ohje"
+      "Valitse kaksi siivua haluamaasi leipää. Itse käytän Fazerin juuresleipä kaura-bataatti-linssi.",
+      "Yhdistä rahkajogurtti ja majoneesi ja suolaa, mustapippuria ja paprikaa maun mukaan. Laita puolet seoksesta pohjasiivuun. Säästä loput seoksesta seuraavaan kerrosleipään.",
+      "Rakenna kerrosleipä tämän jälkeen seuraavalla tavalla: Voileipäkurkku -> sulatejuusto -> kanafilee -> salaatti.",
+      "Laita BBQ-kastiketta toiseen siivuun ja laita siivu päällimmäiseksi."
     ],
   }
 ];
@@ -145,6 +145,22 @@ const jalkiruoat_arr = [
       "Lämmitä uuni 200 asteeseen. Laita seos vuokaan ja kuumenna seos uunissa noin 20 minuuttia riippuen siitä, kuinka kostean haluat leivonnaisen olevan. Muista, että leivonnainen paistuu vielä vuoassa sen jälkeen, kun olet ottanut sen pois uunista.",
       "Leivonnainen maistuu parhaimmalta silloin, kun se on jäähtynyt kunnolla. Voit pitää sitä tunnin jääkaapissa tai yön yli huoneenlämmössä elmukelmulla peitettynä.",
       "Kun olet valmis syömään leivonnaisen, sekoita kreikkalainen jogurtti, 10 g kaakaojauhetta ja sukraloosi keskenään ja käytä sekoitusta leivonnaisen kanssa."
+    ],
+  },
+  {
+    otsikko: "Kylmä jogurtti",
+    otsikko_kalorit: "320 kcal",
+    otsikko_annokset: "- annosta",
+    ainekset: [
+      "200 g Lempi sipoolainen rahkajogurtti 0,7 %",
+      "60 g Valio kevytkerma 10 %",
+      "30 g Mieleinen juokseva hunajavalmiste",
+      "5 g Vaniljauute",
+      "10 g Vaniljasokeri"
+    ],
+    ohjeet: [
+      "Yhdistä kaikki ainekset haluamassasi astiassa.",
+      "Laita astia pakastimeen ja sekoita puolen tunnin välein. Toista tätä niin kauan, kunnes sinulla on haluamasi koostumus."
     ],
   }
 ];
