@@ -1,1 +1,3 @@
-# lowkcal_reseptit
+# Reseptisivusto
+
+https://ojela028xamk.github.io/lowkcal_reseptit/
