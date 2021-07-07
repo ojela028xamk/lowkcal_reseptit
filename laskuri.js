@@ -21,6 +21,7 @@ const database = [
 // Selectorit
 const searchInput = document.querySelector('.search');
 const suggestions = document.querySelector('.suggestions');
+const kalorisumma_html = document.getElementById('kalorisumma');
 searchInput.addEventListener('change', displayMatches);
 searchInput.addEventListener('keyup', displayMatches);
 
@@ -35,7 +36,7 @@ function listaaReseptit() {
     `;
   }).join('');
   suggestions.innerHTML = htmlalku;
-  setTimeout(() => { otaValinta() }, 1000);
+  setTimeout(() => { valintaFunktio() }, 1000);
 }
 
 function findMatches(wordToMatch, database) {
@@ -56,20 +57,60 @@ function displayMatches() {
     `;
   }).join('');
   suggestions.innerHTML = html;
+  valintaFunktio()
 }
 
-function otaValinta() {
+function valintaFunktio() {
 
-  let elems = document.querySelectorAll('.lista1');
   let kalori_valinnat = document.querySelector('.kalori_valinnat');
-
-  for (let i = elems.length; i--;) {
-      elems[i].addEventListener('click', siirraValinta, false);
+  let elems1 = document.querySelectorAll('.lista1');
+  for (let i = elems1.length; i--;) {
+    elems1[i].addEventListener('click', siirraValinta, false);
   }
 
-  function siirraValinta() {
-    this.className = "lista2";
-    kalori_valinnat.appendChild(this.cloneNode(true));
+  function siirraValinta() {    
+
+    let kloonauslista = document.querySelectorAll(".lista2 > .laskuri_nimi");
+    let vertailu = this.querySelector(".laskuri_nimi").textContent;
+
+    for (element of kloonauslista) {
+      if (vertailu === element.textContent) {
+        return;
+      } 
+    }
+
+    let klooni = this.cloneNode(true);
+    klooni.className = "lista2";
+    kalori_valinnat.appendChild(klooni);
+    laskeValinnat();
+
+  }
+
+  function laskeValinnat() {
+
+    let summa = 0;
+    let kalorilista = document.querySelectorAll(".lista2 > .laskuri_kalorit");
+
+    for (let i = 0; i < kalorilista.length; i++) { 
+      let numero = parseInt(kalorilista[i].textContent);
+      summa += numero; 
+    }
+
+    kalorisumma_html.innerHTML = summa;
+
+    let poistolista = document.querySelectorAll(".lista2");
+
+    for (let i = poistolista.length; i--;) {
+      poistolista[i].addEventListener('click', poistaValinta, false);
+    }
+
+    function poistaValinta() {
+      this.remove();
+      laskeValinnat();
+    }
+
   }
 
 }
+
+
