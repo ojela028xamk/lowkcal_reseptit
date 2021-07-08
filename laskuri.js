@@ -92,7 +92,7 @@ function valintaFunktio() {
     let kalorilista = document.querySelectorAll(".lista2 > .laskuri_kalorit");
 
     for (let i = 0; i < kalorilista.length; i++) { 
-      let numero = parseInt(kalorilista[i].textContent);
+      let numero = parseInt(kalorilista[i].textContent); //numero elementin sisällä
       summa += numero; 
     }
 
