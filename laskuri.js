@@ -25,6 +25,9 @@ const kalorisumma_html = document.getElementById('kalorisumma');
 searchInput.addEventListener('change', displayMatches);
 searchInput.addEventListener('keyup', displayMatches);
 
+let kerto_luku;
+let kalori_valinnat;
+
 // Funktiot
 function listaaReseptit() {
   const htmlalku = database.map(annos => {
@@ -32,6 +35,12 @@ function listaaReseptit() {
       <li class="lista1">
         <span class="laskuri_nimi">${annos.resepti}</span>
         <span class="laskuri_kalorit">${annos.kalorit_annos}</span>
+        <select class="laskuri_valinta" onchange="laskeValinnat()">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+        </select>
       </li>
     `;
   }).join('');
@@ -62,55 +71,56 @@ function displayMatches() {
 
 function valintaFunktio() {
 
-  let kalori_valinnat = document.querySelector('.kalori_valinnat');
+  kalori_valinnat = document.querySelector('.kalori_valinnat');
   let elems1 = document.querySelectorAll('.lista1');
   for (let i = elems1.length; i--;) {
     elems1[i].addEventListener('click', siirraValinta, false);
   }
 
-  function siirraValinta() {    
+}
 
-    let kloonauslista = document.querySelectorAll(".lista2 > .laskuri_nimi");
-    let vertailu = this.querySelector(".laskuri_nimi").textContent;
+function laskeValinnat() {
 
-    for (element of kloonauslista) {
-      if (vertailu === element.textContent) {
-        return;
-      } 
-    }
+  let summa = 0;
+  let kalorilista = document.querySelectorAll(".lista2 > .laskuri_kalorit");
+  let annoslista = document.querySelectorAll(".lista2 > .laskuri_valinta");
 
-    let klooni = this.cloneNode(true);
-    klooni.className = "lista2";
-    kalori_valinnat.appendChild(klooni);
-    laskeValinnat();
-
+  for (let i = 0; i < kalorilista.length; i++) { 
+    let numero = parseInt(kalorilista[i].textContent);
+    let annosmaara = annoslista[i].value;
+    summa += numero * annosmaara; 
   }
 
-  function laskeValinnat() {
+  kalorisumma_html.innerHTML = summa;
 
-    let summa = 0;
-    let kalorilista = document.querySelectorAll(".lista2 > .laskuri_kalorit");
+  let poistolista = document.querySelectorAll(".lista2 > .laskuri_nimi");
 
-    for (let i = 0; i < kalorilista.length; i++) { 
-      let numero = parseInt(kalorilista[i].textContent); //numero elementin sisällä
-      summa += numero; 
-    }
+  for (let i = poistolista.length; i--;) {
+    poistolista[i].addEventListener('click', poistaValinta, false);
+  }
 
-    kalorisumma_html.innerHTML = summa;
-
-    let poistolista = document.querySelectorAll(".lista2");
-
-    for (let i = poistolista.length; i--;) {
-      poistolista[i].addEventListener('click', poistaValinta, false);
-    }
-
-    function poistaValinta() {
-      this.remove();
-      laskeValinnat();
-    }
-
+  function poistaValinta() {
+    this.parentElement.remove();
+    laskeValinnat();
   }
 
 }
 
+function siirraValinta() {    
+
+  let kloonauslista = document.querySelectorAll(".lista2 > .laskuri_nimi");
+  let vertailu = this.querySelector(".laskuri_nimi").textContent;
+
+  for (element of kloonauslista) {
+    if (vertailu === element.textContent) {
+      return;
+    } 
+  }
+
+  let klooni = this.cloneNode(true);
+  klooni.className = "lista2";
+  kalori_valinnat.appendChild(klooni);
+  laskeValinnat();
+
+}
 

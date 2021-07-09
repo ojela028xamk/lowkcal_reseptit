@@ -221,6 +221,10 @@ a {
     border: 2px solid black;
 }
 
+.lista1 > .laskuri_valinta {
+    display: none;
+}
+
 /* Footer */
 
 footer {
