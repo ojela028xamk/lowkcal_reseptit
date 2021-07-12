@@ -80,6 +80,7 @@ const paaruoat_arr = [
       "200 g Kanan fileesuikale",
       "70 g Täysjyväpikariisi",
       "100 g Apetit papusekoitus",
+      "100 g Punainen paprika",
       "20 g Punainen sipuli",
       "390 g Pirkka paseerattu tomaatti chili",
       "30 g Ketsuppi",
