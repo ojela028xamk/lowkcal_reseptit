@@ -15,6 +15,18 @@ const database = [
   {
    resepti: "Chili",
    kalorit_annos: 257
+  },
+  {
+   resepti: "Kerrosleipä",
+   kalorit_annos: 300
+  },
+  {
+   resepti: "Banaani-suklaa-pähkinäleivos",
+   kalorit_annos: 390
+  },
+  {
+   resepti: "Kylmä jogurtti",
+   kalorit_annos: 320
   }
 ]
 
@@ -34,13 +46,21 @@ function listaaReseptit() {
     return `
       <li class="lista1">
         <span class="laskuri_nimi">${annos.resepti}</span>
+        <span>&#9889;</span>
         <span class="laskuri_kalorit">${annos.kalorit_annos}</span>
-        <select class="laskuri_valinta" onchange="laskeValinnat()">
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-        </select>
+        <span>kcal</span>
+      <select class="laskuri_valinta" onchange="laskeValinnat()">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+      </select>
       </li>
     `;
   }).join('');
@@ -59,10 +79,24 @@ function displayMatches() {
   const matchArray = findMatches(this.value, database);
   const html = matchArray.map(annos => {
     return `
-      <li class="lista1">
-        <span class="laskuri_nimi">${annos.resepti}</span>
-        <span class="laskuri_kalorit">${annos.kalorit_annos}</span>
-      </li>
+    <li class="lista1">
+      <span class="laskuri_nimi">${annos.resepti}</span>
+      <span>&#9889;</span>
+      <span class="laskuri_kalorit">${annos.kalorit_annos}</span>
+      <span>kcal</span>
+      <select class="laskuri_valinta" onchange="laskeValinnat()">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+      </select>
+    </li>
     `;
   }).join('');
   suggestions.innerHTML = html;
@@ -91,7 +125,7 @@ function laskeValinnat() {
     summa += numero * annosmaara; 
   }
 
-  kalorisumma_html.innerHTML = summa;
+  kalorisumma_html.innerHTML = "Kokonaismäärä " + summa + " kaloria";
 
   let poistolista = document.querySelectorAll(".lista2 > .laskuri_nimi");
 

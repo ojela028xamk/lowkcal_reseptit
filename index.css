@@ -16,33 +16,41 @@
 
 body {
     font-family: 'Alegreya Sans';
-    background: var(--oranssibeige);
+    background-image: url("kuvat/taustakuva.jpg");                 
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
 }
 
 #wrapper {
     max-width: 960px;
     margin: auto;
-    background: rgb(109,104,117);
-    background: linear-gradient(47deg, rgba(109,104,117,1) 0%, rgba(119,119,119,1) 100%);
-    margin-top: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px black;
+    background: var(--vaalearuskea);
+    margin-top: 60px;
+    margin-bottom: 60px;
+    border-radius: 15px;
+    box-shadow: 8px 8px 0px var(--oranssibeige);
     padding: 0.5%;
 }
 
 /* Yläosa ja navigointi */
 
 #ylaosa {
-    min-width: 100%;
+    width: 100%;
     height: 150px;
-    border-radius: 10px;
     text-align: center;
+    margin: auto;
+}
+
+#ylaosa > img {
+    border-radius: 15px;
+    margin-top: -40px;
 }
 
 #navigointi {
     width: 96%;
     height: 50px;
-    margin: 2%;
+    margin: 1%;
     text-align: center;
 }
 
@@ -50,9 +58,12 @@ a {
     font-size: 34px;
     color: #ffffff;
     text-decoration: none;
-    padding: 20px;
+    padding: 10px;
 }
 
+a:hover {
+    color: var(--musta);
+}
 
 /* Content Global */
 
@@ -211,18 +222,75 @@ a {
     display: flex;
 }
 
+#laskuri_ylaosa {
+    display: flex;
+}
+
 .search-form {
+    flex: 1; 
+}
+
+.search {
+    border: 3px solid var(--musta);
+    color: rgb(180, 180, 180);
+    padding: 10px;
+    height: 20px;
+    border-radius: 10px;
+    outline: none;
+    margin: 15px;
+    font-size: 24px;
+}:focus{
+    color: var(--musta);
+}
+
+#kalorisumma {
     flex: 1;
-    border: 2px solid black;
+    color: var(--musta);
+    text-align: center;
+}
+
+.suggestions {
+    padding: 5px;
+    flex: 1;
+}
+
+.suggestions > li {
+    background-color: var(--pastelpink);
+    color: white;
+    padding: 7px;
+    margin: 5px;
+    list-style: none;
 }
 
 .kalori_valinnat {
     flex: 1;
-    border: 2px solid black;
+    padding: 5px;
+}
+
+.kalori_valinnat > li {
+    background-color: var(--pastelpink);
+    color: white;
+    padding: 7px;
+    margin: 5px;
+    list-style: none;
 }
 
 .lista1 > .laskuri_valinta {
     display: none;
+}
+
+.lista2 > .laskuri_valinta {
+    background-color: white;
+    font-size: 20px;
+    padding: 5px;
+    color: black;
+    border: none;
+    margin-left: 10px;
+}
+
+.laskuri_nimi:hover {
+    color: var(--musta);
+    cursor: pointer;
 }
 
 /* Footer */
@@ -277,6 +345,12 @@ p {
   margin-top: 15px;
 }
 
+.search-form > p {
+    font-size: 20px;
+    margin: 20px;
+    padding: 0px;
+}
+
 footer > h1 {
     color: var(--beige);
     font-size: 28px;
@@ -284,4 +358,11 @@ footer > h1 {
 
 span {
     font-size: 22px;
+}
+
+#content > p {
+    text-align: center;
+    font-size: 25px;
+    padding: 22px;
+    margin: 0px;
 }
