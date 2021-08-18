@@ -32,10 +32,11 @@ const database = [
 
 // Selectorit
 const searchInput = document.querySelector('.search');
-const suggestions = document.querySelector('.suggestions');
-const kalorisumma_html = document.getElementById('kalorisumma');
 searchInput.addEventListener('change', displayMatches);
 searchInput.addEventListener('keyup', displayMatches);
+
+const suggestions = document.querySelector('.suggestions'); // Lista resepteistä
+const kalorisumma_html = document.getElementById('kalorisumma'); 
 
 let kerto_luku;
 let kalori_valinnat;
@@ -68,6 +69,7 @@ function listaaReseptit() {
   setTimeout(() => { valintaFunktio() }, 1000);
 }
 
+// Hakufunktio reseptilistalle
 function findMatches(wordToMatch, database) {
   return database.filter(annos => {
     const regex = new RegExp(wordToMatch, 'gi');
@@ -105,7 +107,9 @@ function displayMatches() {
 
 function valintaFunktio() {
 
-  kalori_valinnat = document.querySelector('.kalori_valinnat');
+  kalori_valinnat = document.querySelector('.kalori_valinnat'); // Sinun valintasi
+
+  // Click event jokaiselle reseptille 
   let elems1 = document.querySelectorAll('.lista1');
   for (let i = elems1.length; i--;) {
     elems1[i].addEventListener('click', siirraValinta, false);
@@ -113,6 +117,7 @@ function valintaFunktio() {
 
 }
 
+// Lasketaan kokonaiskalorimäärä
 function laskeValinnat() {
 
   let summa = 0;
@@ -134,27 +139,28 @@ function laskeValinnat() {
   }
 
   function poistaValinta() {
-    this.parentElement.remove();
-    laskeValinnat();
+    this.parentElement.remove(); // Resepti poistetaan sinun listalta
+    laskeValinnat(); // Lasketaan kokonaiskalorimäärä
   }
 
 }
 
 function siirraValinta() {    
 
-  let kloonauslista = document.querySelectorAll(".lista2 > .laskuri_nimi");
-  let vertailu = this.querySelector(".laskuri_nimi").textContent;
+  let kloonauslista = document.querySelectorAll(".lista2 > .laskuri_nimi"); // Sinun valintasi reseptinimet
+  let vertailu = this.querySelector(".laskuri_nimi").textContent; // Reseptilistan reseptinimet
 
   for (element of kloonauslista) {
-    if (vertailu === element.textContent) {
+    if (vertailu === element.textContent) { // Jos resepti löytyy jo sinun listaltasi, reseptiä ei siirretä reseptilistalta
       return;
     } 
   }
 
+  // Siirretään valinta reseptilistalta sinun listaasi
   let klooni = this.cloneNode(true);
   klooni.className = "lista2";
   kalori_valinnat.appendChild(klooni);
-  laskeValinnat();
+  laskeValinnat(); // Lasketaan kokonaiskalorimäärä
 
 }
 
