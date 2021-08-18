@@ -16,7 +16,7 @@
 
 body {
     font-family: 'Alegreya Sans';
-    background-image: url("kuvat/taustakuva.jpg");                 
+    background-image: url("../kuvat/taustakuva.jpg");                 
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;

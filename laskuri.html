@@ -4,14 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="files/index.css">
     <link href='https://fonts.googleapis.com/css?family=Alegreya Sans' rel='stylesheet'>
     <title>Vähäkaloriset reseptit</title>
 </head>
-<body onload="listaaReseptit()">
+
+<body onload="listaaReseptit()"> <!-- Listataan reseptit, kun sivu avataan -->
 <div id="wrapper">
+
     <div id="ylaosa">
-        <img src="lowkcal_logo-01.png" alt="logo">
+        <img src="kuvat/lowkcal_logo-01.png" alt="logo">
     </div>
 
     <nav id="navigointi">
@@ -22,36 +24,32 @@
     </nav>
 
     <div id="content">
+
         <p>Klikkaa reseptin nimeä, jos haluat lisätä sen laskurilistalle tai
-            poistaa sen laskurilistalta.
-        </p>
+            poistaa sen laskurilistalta.</p>
+
         <div id="laskuri_ylaosa">
-            
+
             <div class="search-form">
                 <input type="text" class="search" placeholder="Hae reseptiä...">
-             </div>
-            <h1 id="kalorisumma">Kokonaismäärä 0 kaloria</h1>
-        </div>
-            <div id="content_laskuri">
-
-                <ul class="suggestions">
-        
-                </ul>
-
-                <ul class="kalori_valinnat">
-                    
-                
-                </ul>
             </div>
-        
+
+            <h1 id="kalorisumma">Kokonaismäärä 0 kaloria</h1>
+
+        </div>
+
+            <div id="content_laskuri">
+                <ul class="suggestions"></ul> <!-- Lista resepteistä -->
+                <ul class="kalori_valinnat"></ul> <!-- Sinun valintasi -->
+            </div>   
+
     </div>
 
     <footer id="footer">
         <h1>Design by Jere Länsipii</h1>
     </footer>
+
 </div>
-
-
 </body>
-<script src="laskuri.js"></script>
+<script src="files/laskuri.js"></script>
 </html>
