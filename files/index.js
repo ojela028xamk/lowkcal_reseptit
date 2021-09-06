@@ -105,7 +105,7 @@ const lisukkeet_arr = [
     otsikko_kalorit: "300 kcal",
     otsikko_annokset: "- annosta",
     ainekset: [
-      "2 siivua leipää ~90 kcal / siivu",
+      "2 Siivua leipää ~90 kcal / siivu",
       "20 g Felix voileipäkurkku",
       "1 kpl Sulatejuustoviipale 5% ~28 kcal / viipale",
       "30 g Atria vuolu kanafilee fajitas",
@@ -121,31 +121,49 @@ const lisukkeet_arr = [
       "Rakenna kerrosleipä tämän jälkeen seuraavalla tavalla: Voileipäkurkku -> sulatejuusto -> kanafilee -> salaatti.",
       "Laita BBQ-kastiketta toiseen siivuun ja laita siivu päällimmäiseksi."
     ],
+  },
+  {
+    otsikko: "Perunasalaatti",
+    otsikko_kalorit: "250 kcal",
+    otsikko_annokset: "2 annosta",
+    ainekset: [
+      "250 g Peruna",
+      "80 g Kevyt kermaviili 6 %",
+      "10 g Ketsuppi",
+      "1 tl Dijon sinappi",
+      "1 tl Lime- tai sitruunamehu",
+      "Sitruuna- tai mustapippuri",
+      "Kuivattu tai tuore tilli"
+    ],
+    ohjeet: [
+      "Kuori ja keitä perunat.",
+      "Sekoita kaikki muut ainekset, lisää mausteet maun mukaan.",
+      "Odota, että perunat ovat jäähtyneet. Kuutio tai leikkaa haluamallasi tavalla.",
+      "Sekoita perunat ja kermaviiliseos keskenään. Tarjoile."
+    ],
   }
 ];
 
 const jalkiruoat_arr = [
   {
     otsikko: "Banaani-suklaa-pähkinäleivos",
-    otsikko_kalorit: "390 kcal",
-    otsikko_annokset: "- annosta",
+    otsikko_kalorit: "260 kcal",
+    otsikko_annokset: "2 annosta",
     ainekset: [
       "100 g Banaani",
-      "30 g Pirkka kaakaojauhe",
+      "20 g Pirkka kaakaojauhe",
       "10 g PB2 sulkaa / normaali pähkinäjauho",
       "15 g Puolikarkea vehnäjauho",
       "45 g Erytritoli",
-      "100 g Kreikkalainen jogurtti 6%",
       "1/2 tl Leivinjauhe",
-      "Suola",
-      "1 rkl Sukraloosi"
+      "Suola"
     ],
     ohjeet: [
       "Murskaa banaani kulhossa",
       "Lisää 20 g kaakaojauheesta ja kaikki muut ainesosat, 50 ml vettä ja ripaus suolaa.",
       "Lämmitä uuni 200 asteeseen. Laita seos vuokaan ja kuumenna seos uunissa noin 20 minuuttia riippuen siitä, kuinka kostean haluat leivonnaisen olevan. Muista, että leivonnainen paistuu vielä vuoassa sen jälkeen, kun olet ottanut sen pois uunista.",
       "Leivonnainen maistuu parhaimmalta silloin, kun se on jäähtynyt kunnolla. Voit pitää sitä tunnin jääkaapissa tai yön yli huoneenlämmössä elmukelmulla peitettynä.",
-      "Kun olet valmis syömään leivonnaisen, sekoita kreikkalainen jogurtti, 10 g kaakaojauhetta ja sukraloosi keskenään ja käytä sekoitusta leivonnaisen kanssa."
+      "Tarjoile esim. vaniljajäätelön kanssa."
     ],
   },
   {

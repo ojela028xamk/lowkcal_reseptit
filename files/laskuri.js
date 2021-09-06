@@ -21,6 +21,10 @@ const database = [
    kalorit_annos: 300
   },
   {
+   resepti: "Perunasalaatti",
+   kalorit_annos: 250
+  },
+  {
    resepti: "Banaani-suklaa-pähkinäleivos",
    kalorit_annos: 390
   },
